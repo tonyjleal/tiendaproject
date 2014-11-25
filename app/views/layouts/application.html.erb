@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @titulo %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	Tienda TONY
+</header>
+<nav>
+<%= link_to_unless_current 'Inicio', index_path %> |
+<%= link_to_unless_current 'Quiénes Somos', quienes_path %> |
+<%= link_to_unless_current 'Contacto', contacto_path %> |
+
+<% if session[:carrito] %>
+	<%= link_to_unless_current "Carro ( #{ session[:carrito].cesta.size } )", ver_carro_path %>  |
+<% end %>
+</nav>
+
+<% if flash[:notice] %>
+	<div class="alerta_mensaje">
+		<%= notice %>
+	</div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

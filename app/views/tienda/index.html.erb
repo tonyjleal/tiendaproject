@@ -1,0 +1,14 @@
+
+
+
+<h1>Listado de nuestros productos</h1>
+
+<article>
+	<% @articulos.each do |a| %>
+		<span class='titulo'><%= a.nombre %></span>
+		<span class='descripcion'><%= a.descripcion %></span>
+		<b>Precio:</b> <span class='precio'><%= a.precio %> €</span>
+		<%= image_tag a.imagen, size:'200x200' %>
+		<%= button_to 'Añadir', anadir_producto_path(a) %>
+	<% end %>
+</article>

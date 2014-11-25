@@ -1,0 +1,19 @@
+
+<h1>Tu carrito de la compra</h1>
+<% @total = 0 %>
+<% for articulo in @carro.cesta %>
+	<article>
+			<span class='titulo'><%= articulo.nombre %></span>
+			<span class='descripcion'><%= articulo.descripcion %></span>
+			<b>Precio:</b> <span class='precio'><%= articulo.precio %> €</span>
+			<%= image_tag articulo.imagen, size:'200x200' %>
+			<% @total += articulo.precio %>
+	</article>
+<% end %>
+<div style="clear:both;"></div>
+<br/>
+<b>Total:</b> <%= @total.round(2) %>€ <br/><br/>
+<div class="botones_cesta">
+	<%= link_to "Continuar comprando", index_url %>
+	<%= link_to "Vaciar cesta", vaciar_cesta_path %>
+</div>

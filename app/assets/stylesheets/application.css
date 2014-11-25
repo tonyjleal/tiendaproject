@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body{
+	font-family: Arial, 'Times New Roman', serif;
+	font-size: 14px;
+ }
+
+ header{
+ 	padding: 50px 0 50px 40px;
+	font-size: 41px;
+ 	height:50px;
+ 	background-color: #F1E8D7;
+ 	color:#000;
+ 	font-style: italic;
+ }
+
+nav {
+	 font-weight: normal;
+	font-size: 12px;
+	background-color: #000;
+	color:#fff;
+	padding: 12px;
+	font-family: sans-serif;
+	color: #ea7987;
+}
+
+nav a{
+	color:#fff;
+}
+
+nav a:hover{
+	color: #F1E8D7;
+}
+
+article
+{
+	padding: 20px;
+	width:200px;
+	height: 300px;
+	float:left;
+	border: 1px solid #aaa;
+	margin: 5px;
+}
+
+article input[type='submit']{
+	background-color: green;
+	color: white;
+	height:20px;
+	width:80px;
+	float:right;
+	border:0;
+	cursor: pointer;
+}
+
+article input[type='submit']:hover{
+	text-decoration: underline;
+	border: 1px solid #ddd;
+}
+
+article span.titulo{
+	font-size: 20px;
+	margin-bottom: 11px;
+	display: block;
+}
+
+article span.descripcion{
+	color: #1a1a1a;
+	text-align: :justify;
+}
+
+article article span.titulo, article span.descripcion{
+	display: block;
+}
+
+article span.precio{
+	font-size: 15px;
+}
+
+article img{
+	display: block;
+	padding-bottom: 20px;
+}
+
+.botones_cesta{
+	clear: left;
+	display: inline-block;
+}
+
+.alerta_mensaje
+{
+	height:30px;
+	padding: 20px;
+	font-size: 20px;
+	background-color: #acd69e;
+	width:50%;
+	margin: 7px auto;
+}
+

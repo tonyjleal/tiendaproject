@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<article>
+		<span class='titulo'><%= @articulo.nombre %></span>
+		<span class='descripcion'><%= @articulo.descripcion %></span>
+		<b>Precio:</b> <span class='precio'><%= @articulo.precio %> €</span>
+		<%= image_tag @articulo.imagen, size:'200x200' %>
+</article>
+<div style="clear:both;"></div>
+<%= link_to 'Edit', edit_articulo_path(@articulo) %> |
+<%= link_to 'Back', articulos_path %>
